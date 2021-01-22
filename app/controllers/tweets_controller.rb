@@ -10,7 +10,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets/1
   def show
-    render json: @tweet
+    render json: { tweet: @tweet, replies: @tweet.replies }
   end
 
   # POST /tweets
